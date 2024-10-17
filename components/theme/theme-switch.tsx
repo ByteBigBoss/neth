@@ -30,10 +30,10 @@ const ThemeSwitch = () => {
     };
 
     return (
-        <div className='h-[41px] flex items-center px-[6px] py-[4px] rounded-full border border-imcrox_border_primary w-fit'>
-            <div onClick={() => handleChangeTheme({t:"light"})} className={`w-[28px] h-[28px] rounded-full flex justify-center items-center cursor-pointer ${theme === "light" ? "bg-secondary-50" : ""} `}><Sun size={16} /></div>
-            <div onClick={() =>handleChangeTheme({t:"system"})} className={`w-[28px] h-[28px] rounded-full flex justify-center items-center cursor-pointer ${theme === "system" ? "bg-secondary-50" : ""} `}><Monitor size={16} /></div>
-            <div onClick={() => handleChangeTheme({t:"dark"})} className={`w-[28px] h-[28px] rounded-full flex justify-center items-center cursor-pointer ${theme === "dark" ? "bg-secondary-50" : ""} `}><Moon size={16} /></div>
+        <div className='h-[41px]  backdrop-blur-sm flex items-center px-[6px] py-[4px] rounded-full border border-imcrox_border_primary w-fit'>
+            <div onClick={() => handleChangeTheme({t:"light"})} className={`w-[28px] h-[28px] rounded-full flex justify-center items-center cursor-pointer ${theme === "light" ? "bg-[#f7f7f7] dark:bg-[#1A1A1A80]" : ""} `}><Sun size={16} /></div>
+            <div onClick={() =>handleChangeTheme({t:"system"})} className={`w-[28px] h-[28px] rounded-full flex justify-center items-center cursor-pointer ${theme === "system" ? "bg-[#f7f7f7] dark:bg-[#1A1A1A80]" : ""} `}><Monitor size={16} /></div>
+            <div onClick={() => handleChangeTheme({t:"dark"})} className={`w-[28px] h-[28px] rounded-full flex justify-center items-center cursor-pointer ${theme === "dark" ? "bg-[#f7f7f7] dark:bg-[#1A1A1A80]" : ""} `}><Moon size={16} /></div>
         </div>
     )
 }

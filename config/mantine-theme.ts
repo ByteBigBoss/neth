@@ -8,9 +8,9 @@ export const theme = createTheme({
         '#acaebf', // dark[1] - Slightly darker (secondary text, subtle highlights)
         '#8c8fa3', // dark[2] - Tertiary text, muted labels
         '#666980', // dark[3] - Disabled elements, borders
-        '#4d4f66', // dark[4] - Input borders, subtle backgrounds
+        '#ffffff1f', // dark[4] - Input borders, subtle backgrounds
         '#34354a', // dark[5] - Card backgrounds, default component background
-        '#2b2c3d', // dark[6] - Sidebar backgrounds, hover backgrounds
+        '#000', // dark[6] - Sidebar backgrounds, hover backgrounds
         '#111111', // dark[7] - Navbar, deeper backgrounds -- main bg
         '#0c0d21', // dark[8] - Main background (body, main layout background)
         '#01010a', // dark[9] - Deepest areas, footers, modal backdrops

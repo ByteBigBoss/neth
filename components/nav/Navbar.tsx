@@ -10,6 +10,7 @@ import ThemeSwitch from '../theme/theme-switch'
 import { Burger, Drawer } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks';
 import { Site } from '@/config/site'
+import { JelloElement } from '../animations/shoelace/jello-element'
 
 const Navbar = () => {
 
@@ -30,6 +31,8 @@ const Navbar = () => {
                 setCurrentPath("about");
             } else if (path.endsWith("works")) {
                 setCurrentPath("works");
+            } else if (path.endsWith("updates")) {
+                setCurrentPath("updates");
             } else if (path.endsWith("blog")) {
                 setCurrentPath("blog");
             } else if (path.endsWith("contact")) {
@@ -84,10 +87,10 @@ const Navbar = () => {
                         <Drawer.CloseButton />
                     </Drawer.Header>
                     <Drawer.Body>
-                        {/* <div className='flex justify-between items-center mt-4'>
+                        <div className='flex justify-between items-center mt-4'>
                             <span>Theme:</span>
                             <ThemeSwitch/>
-                        </div> */}
+                        </div>
 
                         <div
                             className={`px-[4px] flex flex-col items-center  text-[14px] h-auto mt-6 gap-4 w-full`
@@ -116,10 +119,16 @@ const Navbar = () => {
                                 >Works</Button>
                             </Link>
                             {/* BLOG */}
-                            <Link className='w-full' href={currentPath === "blog" ? "" : "/blog"}>
+                            {/* <Link className='w-full' href={currentPath === "blog" ? "" : "/blog"}>
                                 <Button variant='ghost' className={`${currentPath === "blog" ? "border   font-medium opacity-100  flex items-center justify-center bg-[#f7f7f7] dark:bg-[#00000025] "
                                     : "  px-0 border-none focus:outline-none opacity-80"} w-full rounded-full h-[40px] border-[#0000001f] dark:border-[#ffffff1f] text-center`}
                                 >Blog</Button>
+                            </Link> */}
+                            {/* UPDATES ------------------------------------------------------- */}
+                             <Link className='w-full' href={currentPath === "updates" ? "" : "/updates"}>
+                                <Button variant='ghost' className={`${currentPath === "updates" ? "border   font-medium opacity-100  flex items-center justify-center bg-[#f7f7f7] dark:bg-[#00000025] "
+                                    : "  px-0 border-none focus:outline-none opacity-80"} w-full rounded-full h-[40px] border-[#0000001f] dark:border-[#ffffff1f] text-center`}
+                                >Updates</Button>
                             </Link>
                         </div>
                     </Drawer.Body>
@@ -162,18 +171,24 @@ const Navbar = () => {
                                 >Works</Button>
                             </Link>
                             {/* BLOG */}
-                            <Link href={currentPath === "blog" ? "" : "/blog"}>
+                            {/* <Link href={currentPath === "blog" ? "" : "/blog"}>
                                 <Button variant='ghost' className={`${currentPath === "blog" ? "border   font-medium opacity-100 px-[24px] flex items-center justify-center bg-[#f7f7f7] dark:bg-[#00000025] "
                                     : "  px-0 border-none focus:outline-none opacity-80"} rounded-full h-[33px] border-[#0000001f] dark:border-[#ffffff1f] text-center`}
                                 >Blog</Button>
+                            </Link> */}
+                            {/* UPDATES ------------------------------------------------------- */}
+                               <Link href={currentPath === "updates" ? "" : "/updates"}>
+                                <Button variant='ghost' className={`${currentPath === "updates" ? "border   font-medium opacity-100 px-[24px] flex items-center justify-center bg-[#f7f7f7] dark:bg-[#00000025] "
+                                    : "  px-0 border-none focus:outline-none opacity-80"} rounded-full h-[33px] border-[#0000001f] dark:border-[#ffffff1f] text-center`}
+                                >Updates</Button>
                             </Link>
                         </div>
                     </div>
 
                     {/* RIGHT */}
                     <div className='flex items-center gap-6 z-[50] mobile:hidden mid:hidden mid:w-0 mid:h-0 mobile:w-0 mobile:h-0'>
-                        {/* <ThemeSwitch /> */}
-                        <Link href={"/contact"}> <Button className='text-[14px] font-semibold text-black bg-[#91FF00] h-[37px] px-[20px] rounded-[15px] flex justify-center items-center'>Let&apos;s Talk</Button></Link>
+                        <ThemeSwitch />
+                        <Link href={"/contact"}> <JelloElement><Button className='text-[14px] font-semibold dark:text-black text-white bg-[#19cf31] dark:bg-[#91FF00] h-[37px] px-[20px] rounded-[15px] flex justify-center items-center'>Let&apos;s Talk</Button></JelloElement></Link>
                     </div>
 
                     {/* MENUBAR */}
